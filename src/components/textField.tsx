@@ -3,6 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 const TextField: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   className,
+  autoComplete = "off",
   ...props
 }) => {
   const INPUT_CLASSNAME = ""; // todo: customize common textfield
@@ -10,6 +11,7 @@ const TextField: FC<InputHTMLAttributes<HTMLInputElement>> = ({
   return (
     <input
       className={twMerge(INPUT_CLASSNAME, className)}
+      autoComplete={autoComplete}
       {...props}
     />
   );

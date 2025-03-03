@@ -13,8 +13,13 @@ const useLoginForm = () => {
     }
   });
 
+  const onSubmit = (data: LoginFormType) => {
+    console.log(data.username, data.password);
+  };
+
   return {
     form,
+    onSubmit,
   };
 };
 
