@@ -2,6 +2,7 @@ import { FC } from "react";
 import { InputFieldTypes, LoginFormFields } from "@/interfaces/components/fields";
 import { UseFormRegister } from "react-hook-form";
 import { LoginFormType } from "../../hooks/form";
+import TextField from "@/components/textField";
 
 interface Props {
   value: string;
@@ -14,7 +15,7 @@ const Field: FC<Props> = ({ value, type, name, register }) => {
   const INPUT_CLASSNAME = "outline-yellow-500";
 
   return (
-    <input
+    <TextField
       type={type}
       className={INPUT_CLASSNAME}
       value={value}
