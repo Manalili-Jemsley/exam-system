@@ -14,7 +14,7 @@ const useLoginForm = () => {
   });
 
   const onSubmit = (data: LoginFormType) => {
-    console.log(data.username, data.password);
+    fetch("http://localhost:3000/api/login", { method: "POST", body: JSON.stringify(data) });
   };
 
   return {
